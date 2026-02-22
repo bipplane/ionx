@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>70 RP A-Level Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Singapore A-Level Calculator (70 RP)</h1>
+            <p>Calculate your Rank Points and discover eligible university programmes based on AY25/26 IGP.</p>
+        </header>
+
+        <main>
+            <section class="calculator-section">
+                <div class="form-group">
+                    <label for="gp">H1 General Paper</label>
+                    <select id="gp">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="S">S</option>
+                        <option value="U">U</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mtl">H1 Mother Tongue (Optional)</label>
+                    <select id="mtl">
+                        <option value="None">Not Taken / Excluded</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="S">S</option>
+                        <option value="U">U</option>
+                    </select>
+                </div>
+
+                <div class="subjects-grid">
+                    <div class="subject-row">
+                        <label>Subject 1</label>
+                        <select id="s1-level">
+                            <option value="H2">H2</option>
+                        </select>
+                        <select id="s1-grade">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                            <option value="S">S</option>
+                            <option value="U">U</option>
+                        </select>
+                    </div>
+                    <div class="subject-row">
+                        <label>Subject 2</label>
+                        <select id="s2-level">
+                            <option value="H2">H2</option>
+                        </select>
+                        <select id="s2-grade">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                            <option value="S">S</option>
+                            <option value="U">U</option>
+                        </select>
+                    </div>
+                    <div class="subject-row">
+                        <label>Subject 3</label>
+                        <select id="s3-level">
+                            <option value="H2">H2</option>
+                        </select>
+                        <select id="s3-grade">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                            <option value="S">S</option>
+                            <option value="U">U</option>
+                        </select>
+                    </div>
+                    <div class="subject-row">
+                        <label>Subject 4 (Optional)</label>
+                        <select id="s4-level">
+                            <option value="None">None</option>
+                            <option value="H2">H2</option>
+                            <option value="H1">H1</option>
+                        </select>
+                        <select id="s4-grade">
+                            <option value="None">-</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                            <option value="S">S</option>
+                            <option value="U">U</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="calculate-btn">Calculate RP & Find Courses</button>
+            </section>
+
+            <section class="results-section" id="results-section" style="display: none;">
+                <div class="score-display">
+                    <h2>Your Rank Points</h2>
+                    <div class="rp-value"><span id="rp-result">0.00</span> / 70</div>
+                </div>
+
+                <div class="eligible-courses">
+                    <h2>Eligible Programmes (10th Percentile IGP)</h2>
+                    <div id="courses-container"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
