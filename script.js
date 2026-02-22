@@ -75,7 +75,7 @@ const igpData = [
     { "university": "SMU", "course": "Computing & Law", "grades": "ABB/A", "rp_70": 65 },
     { "university": "SMU", "course": "Software Engineering", "grades": "BBC/B", "rp_70": 58.75 },
     { "university": "SMU", "course": "Social Sciences", "grades": "BBB/C", "rp_70": 60 },
-    { "university": "SMU", "course": "Deferred Declaration of Degree /Integrative Studies", "grades": "ABB/A", "rp_70": 65 }
+    { "university": "SMU", "course": "Deferred Declaration of Degree / Integrative Studies", "grades": "ABB/A", "rp_70": 65 }
 ];
 
 const h2Grades = { 'A': 20, 'B': 17.5, 'C': 15, 'D': 12.5, 'E': 10, 'S': 5, 'U': 0 };
@@ -165,17 +165,28 @@ function renderCourses(rp) {
     const container = document.getElementById('courses-container');
     container.innerHTML = '';
 
-    const universities = ['NUS', 'NTU', 'SMU'];
+    const universities = [
+        { name: 'NUS', url: 'https://nus.edu.sg/oam/admissions/indicative-grade-profile' },
+        { name: 'NTU', url: 'https://www.ntu.edu.sg/admissions/undergraduate/indicative-grade-profile' },
+        { name: 'SMU', url: 'https://admissions.smu.edu.sg/admissions-requirements/indicative-grade-profile' }
+    ];
 
     universities.forEach(uni => {
-        const uniCourses = igpData.filter(c => c.university === uni && rp >= c.rp_70);
+        const uniCourses = igpData
+            .filter(c => c.university === uni.name && rp >= c.rp_70)
+            .sort((a, b) => b.rp_70 - a.rp_70);
         
         if (uniCourses.length > 0) {
             const uniDiv = document.createElement('div');
             uniDiv.className = 'uni-section';
             
             const uniHeader = document.createElement('h3');
-            uniHeader.textContent = uni;
+            const uniLink = document.createElement('a');
+            uniLink.href = uni.url;
+            uniLink.target = '_blank';
+            uniLink.rel = 'noopener noreferrer';
+            uniLink.textContent = uni.name;
+            uniHeader.appendChild(uniLink);
             uniDiv.appendChild(uniHeader);
 
             const list = document.createElement('ul');

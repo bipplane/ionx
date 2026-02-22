@@ -129,9 +129,9 @@ button:hover {
 .score-display {
     text-align: center;
     background: #e8f4f8;
-    padding: 30px;
+    padding: 14px;
     border-radius: 8px;
-    margin-bottom: 30px;
+    margin-bottom: 14px;
     border: 1px solid #d1e8f0;
 }
 
@@ -141,34 +141,41 @@ button:hover {
 }
 
 .rp-value {
-    font-size: 48px;
+    font-size: 32px;
     font-weight: bold;
     color: #2c3e50;
 }
 
 .eligible-courses h2 {
-    margin-bottom: 20px;
     color: #2c3e50;
     border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
 }
 
 #courses-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 15px;
 }
 
 .uni-section {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .uni-section h3 {
     background: #34495e;
-    color: white;
-    padding: 10px 15px;
+    padding: 6px 12px;
     border-radius: 6px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.uni-section h3 a {
+    color: white;
+    text-decoration: none;
+}
+
+.uni-section h3 a:hover {
+    text-decoration: underline;
 }
 
 .uni-section ul {
@@ -178,8 +185,8 @@ button:hover {
 .uni-section li {
     background: #fff;
     border: 1px solid #eee;
-    padding: 12px 15px;
-    margin-bottom: 8px;
+    padding: 8px 12px;
+    margin-bottom: 6px;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
@@ -188,15 +195,32 @@ button:hover {
 
 .course-name {
     font-weight: 500;
+    font-size: 16px;
 }
 
 .course-igp {
     color: #7f8c8d;
-    font-size: 14px;
+    font-size: 12px;
     background: #f4f7f6;
-    padding: 4px 8px;
+    padding: 2px 6px;
     border-radius: 4px;
-    margin-top: 8px;
+    margin-top: 3px;
+}
+
+.disclaimer-note {
+    margin-top: 10px;
+    margin-bottom: 10px;    
+    padding: 15px;
+    background-color: #fdfbf7;
+    border-left: 4px solid #f39c12;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #7f8c8d;
+    line-height: 1.5;
+}
+
+.disclaimer-note strong {
+    color: #e67e22;
 }
 
 @keyframes fadeIn {
