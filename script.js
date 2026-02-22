@@ -115,6 +115,8 @@ document.getElementById('calculate-btn').addEventListener('click', () => {
         h1Scores.push(weakestH2 / 2);
     }
 
+    h1Scores.sort((a, b) => b - a);
+
     let baseScore = 0;
     for (let i = 0; i < Math.min(3, h2Scores.length); i++) {
         baseScore += h2Scores[i];
@@ -144,9 +146,19 @@ document.getElementById('calculate-btn').addEventListener('click', () => {
     const finalRP = maxPercentage * 70;
     
     document.getElementById('rp-result').textContent = finalRP.toFixed(2);
-    document.getElementById('results-section').style.display = 'block';
+    
+    const resultsSection = document.getElementById('results-section');
+    resultsSection.style.display = 'block';
+    
+    // Force animation restart to provide visual feedback on recalculation
+    resultsSection.style.animation = 'none';
+    void resultsSection.offsetWidth; // trigger reflow
+    resultsSection.style.animation = 'fadeIn 0.5s ease-in-out';
     
     renderCourses(finalRP);
+    
+    // Smooth scroll to results
+    resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
 function renderCourses(rp) {
@@ -189,6 +201,6 @@ function renderCourses(rp) {
     });
 
     if (container.innerHTML === '') {
-        container.innerHTML = '<p style="text-align: center; color: #7f8c8d; padding: 20px;">No programmes found matching your Rank Points.</p>';
+        container.innerHTML = '<p style="text-align: center; color: #7f8c8d; padding: 20px; grid-column: 1 / -1;">No programmes found matching your Rank Points.</p>';
     }
 }

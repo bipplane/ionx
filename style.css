@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1100px;
     margin: 40px auto;
     padding: 30px;
     background: #fff;
@@ -36,6 +36,21 @@ header h1 {
 header p {
     color: #7f8c8d;
     font-size: 15px;
+}
+
+.powered-by {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.powered-by a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.powered-by a:hover {
+    text-decoration: underline;
 }
 
 .form-group {
@@ -138,6 +153,12 @@ button:hover {
     padding-bottom: 10px;
 }
 
+#courses-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
 .uni-section {
     margin-bottom: 25px;
 }
@@ -161,8 +182,8 @@ button:hover {
     margin-bottom: 8px;
     border-radius: 6px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .course-name {
@@ -175,6 +196,7 @@ button:hover {
     background: #f4f7f6;
     padding: 4px 8px;
     border-radius: 4px;
+    margin-top: 8px;
 }
 
 @keyframes fadeIn {
@@ -182,17 +204,13 @@ button:hover {
     to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .subject-row {
         grid-template-columns: 1fr;
         gap: 10px;
         margin-bottom: 25px;
     }
-    .uni-section li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .course-igp {
-        margin-top: 8px;
+    #courses-container {
+        grid-template-columns: 1fr;
     }
 }
