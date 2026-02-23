@@ -1,82 +1,82 @@
 const igpData = [
-    { "university": "NUS", "course": "Law", "grades": "AAA/A", "rp_70": 70 },
-    { "university": "NUS", "course": "Medicine", "grades": "AAA/A", "rp_70": 70 },
+    { "university": "NUS", "course": "Law", "grades": "AAA/A", "rp_70": 67.5 },
+    { "university": "NUS", "course": "Medicine", "grades": "AAA/A", "rp_70": 67.5 },
     { "university": "NUS", "course": "Nursing", "grades": "CCD/C", "rp_70": 50 },
-    { "university": "NUS", "course": "Dentistry", "grades": "AAA/A", "rp_70": 70 },
+    { "university": "NUS", "course": "Dentistry", "grades": "AAA/A", "rp_70": 67.5 },
     { "university": "NUS", "course": "Architecture", "grades": "CCC/C", "rp_70": 52.5 },
     { "university": "NUS", "course": "Engineering", "grades": "BBB/C", "rp_70": 60 },
     { "university": "NUS", "course": "Industrial Design", "grades": "BBC/B", "rp_70": 58.75 },
     { "university": "NUS", "course": "Landscape Architecture", "grades": "CCC/B", "rp_70": 53.75 },
-    { "university": "NUS", "course": "Computing (Business Analytics)", "grades": "AAA/A", "rp_70": 70 },
-    { "university": "NUS", "course": "Computing (Information Systems)", "grades": "AAA/B", "rp_70": 68.75 },
-    { "university": "NUS", "course": "Computing (Computer Science)", "grades": "AAA/A", "rp_70": 70 },
-    { "university": "NUS", "course": "Computing (Information Security)", "grades": "AAA/B", "rp_70": 68.75 },
-    { "university": "NUS", "course": "Computer Engineering", "grades": "AAA/A", "rp_70": 70 },
-    { "university": "NUS", "course": "Data Science & Economics", "grades": "AAA/A", "rp_70": 70 },
-    { "university": "NUS", "course": "Environmental Studies", "grades": "AAA/B", "rp_70": 68.75 },
+    { "university": "NUS", "course": "Computing (Business Analytics)", "grades": "AAA/A", "rp_70": 67.5 },
+    { "university": "NUS", "course": "Computing (Information Systems)", "grades": "AAA/B", "rp_70": 67.5 },
+    { "university": "NUS", "course": "Computing (Computer Science)", "grades": "AAA/A", "rp_70": 67.5 },
+    { "university": "NUS", "course": "Computing (Information Security)", "grades": "AAA/B", "rp_70": 67.5 },
+    { "university": "NUS", "course": "Computer Engineering", "grades": "AAA/A", "rp_70": 67.5 },
+    { "university": "NUS", "course": "Data Science & Economics", "grades": "AAA/A", "rp_70": 67.5 },
+    { "university": "NUS", "course": "Environmental Studies", "grades": "AAA/B", "rp_70": 67.5 },
     { "university": "NUS", "course": "Food Science & Technology", "grades": "AAA/C", "rp_70": 67.5 },
     { "university": "NUS", "course": "Humanities & Sciences", "grades": "ABB/C", "rp_70": 62.5 },
-    { "university": "NUS", "course": "Pharmaceutical Science", "grades": "AAA/A", "rp_70": 70 },
+    { "university": "NUS", "course": "Pharmaceutical Science", "grades": "AAA/A", "rp_70": 67.5 },
     { "university": "NUS", "course": "Pharmacy", "grades": "AAA/C", "rp_70": 67.5 },
-    { "university": "NUS", "course": "Philosophy, Politics & Economics", "grades": "AAA/A", "rp_70": 70 },
+    { "university": "NUS", "course": "Philosophy, Politics & Economics", "grades": "AAA/A", "rp_70": 67.5 },
     { "university": "NUS", "course": "Business Administration", "grades": "AAA/C", "rp_70": 67.5 },
-    { "university": "NTU", "course": "Medicine", "grades": "AAA/A", "rp_70": 70 },
-    { "university": "NTU", "course": "Renaissance Engineering", "grades": "AAA/A", "rp_70": 70 },
-    { "university": "NTU", "course": "Aerospace Engineering", "grades": "ABC/B", "rp_70": 61.25 },
-    { "university": "NTU", "course": "Bioengineering", "grades": "BCC/B", "rp_70": 56.25 },
+    { "university": "NTU", "course": "Medicine", "grades": "AAA/A", "rp_70": 67.5 },
+    { "university": "NTU", "course": "Renaissance Engineering", "grades": "AAA/A", "rp_70": 67.5 },
+    { "university": "NTU", "course": "Aerospace Engineering", "grades": "ABC/B", "rp_70": 60 },
+    { "university": "NTU", "course": "Bioengineering", "grades": "BCC/B", "rp_70": 55 },
     { "university": "NTU", "course": "Chemical & Biomolecular Engineering", "grades": "BCC/C", "rp_70": 55 },
-    { "university": "NTU", "course": "Civil Engineering", "grades": "CCD/D", "rp_70": 48.75 },
-    { "university": "NTU", "course": "Electrical & Electronic Engineering", "grades": "CCC/D", "rp_70": 51.25 },
-    { "university": "NTU", "course": "Environmental Engineering", "grades": "BCC/D", "rp_70": 53.75 },
-    { "university": "NTU", "course": "Information Engineering & Media", "grades": "BCC/D", "rp_70": 53.75 },
+    { "university": "NTU", "course": "Civil Engineering", "grades": "CCD/D", "rp_70": 47.5 },
+    { "university": "NTU", "course": "Electrical & Electronic Engineering", "grades": "CCC/D", "rp_70": 52.5 },
+    { "university": "NTU", "course": "Environmental Engineering", "grades": "BCC/D", "rp_70": 55 },
+    { "university": "NTU", "course": "Information Engineering & Media", "grades": "BCC/D", "rp_70": 55 },
     { "university": "NTU", "course": "Maritime Studies", "grades": "BCC/C", "rp_70": 55 },
-    { "university": "NTU", "course": "Materials Engineering", "grades": "BCC/D", "rp_70": 53.75 },
+    { "university": "NTU", "course": "Materials Engineering", "grades": "BCC/D", "rp_70": 55 },
     { "university": "NTU", "course": "Mechanical Engineering", "grades": "CCD/C", "rp_70": 50 },
     { "university": "NTU", "course": "Process Engineering and Synthetic Chemistry", "grades": "ABC/C", "rp_70": 60 },
-    { "university": "NTU", "course": "Robotics", "grades": "BBC/B", "rp_70": 58.75 },
+    { "university": "NTU", "course": "Robotics", "grades": "BBC/B", "rp_70": 57.5 },
     { "university": "NTU", "course": "Artificial Intelligence and Society", "grades": "ABC/C", "rp_70": 60 },
     { "university": "NTU", "course": "Computer Engineering", "grades": "AAC/C", "rp_70": 62.5 },
     { "university": "NTU", "course": "Computer Science", "grades": "AAB/C", "rp_70": 65 },
-    { "university": "NTU", "course": "Data Science & Artificial Intelligence", "grades": "AAB/B", "rp_70": 66.25 },
-    { "university": "NTU", "course": "Science Double Major Programmes", "grades": "AAB/B", "rp_70": 66.25 },
+    { "university": "NTU", "course": "Data Science & Artificial Intelligence", "grades": "AAB/B", "rp_70": 65 },
+    { "university": "NTU", "course": "Science Double Major Programmes", "grades": "AAB/B", "rp_70": 65 },
     { "university": "NTU", "course": "Biological Sciences", "grades": "AAB/C", "rp_70": 65 },
     { "university": "NTU", "course": "Chemistry & Biological Chemistry", "grades": "BCC/C", "rp_70": 55 },
-    { "university": "NTU", "course": "Chinese Medicine", "grades": "ABC/B", "rp_70": 61.25 },
-    { "university": "NTU", "course": "Environmental Earth Systems Science", "grades": "AAB/B", "rp_70": 66.25 },
-    { "university": "NTU", "course": "Mathematical Sciences", "grades": "BCC/B", "rp_70": 56.25 },
-    { "university": "NTU", "course": "Physics / Applied Physics", "grades": "CCC/D", "rp_70": 51.25 },
-    { "university": "NTU", "course": "Accountancy", "grades": "BBC/B", "rp_70": 58.75 },
-    { "university": "NTU", "course": "Business", "grades": "BBC/B", "rp_70": 58.75 },
+    { "university": "NTU", "course": "Chinese Medicine", "grades": "ABC/B", "rp_70": 60 },
+    { "university": "NTU", "course": "Environmental Earth Systems Science", "grades": "AAB/B", "rp_70": 65 },
+    { "university": "NTU", "course": "Mathematical Sciences", "grades": "BCC/B", "rp_70": 55 },
+    { "university": "NTU", "course": "Physics / Applied Physics", "grades": "CCC/D", "rp_70": 52.5 },
+    { "university": "NTU", "course": "Accountancy", "grades": "BBC/B", "rp_70": 57.5 },
+    { "university": "NTU", "course": "Business", "grades": "BBC/B", "rp_70": 57.5 },
     { "university": "NTU", "course": "Applied Computing in Finance", "grades": "AAC/C", "rp_70": 62.5 },
     { "university": "NTU", "course": "SOH Double Major Programmes", "grades": "AAA/C", "rp_70": 67.5 },
     { "university": "NTU", "course": "SSS Double Major Programmes", "grades": "AAA/C", "rp_70": 67.5 },
     { "university": "NTU", "course": "Art, Design & Media", "grades": "CCC/C", "rp_70": 52.5 },
     { "university": "NTU", "course": "Chinese", "grades": "BBC/C", "rp_70": 57.5 },
-    { "university": "NTU", "course": "Communication Studies", "grades": "ABC/B", "rp_70": 61.25 },
-    { "university": "NTU", "course": "Economics", "grades": "ABC/B", "rp_70": 61.25 },
-    { "university": "NTU", "course": "Economics and Data Science", "grades": "AAB/B", "rp_70": 66.25 },
+    { "university": "NTU", "course": "Communication Studies", "grades": "ABC/B", "rp_70": 60 },
+    { "university": "NTU", "course": "Economics", "grades": "ABC/B", "rp_70": 60 },
+    { "university": "NTU", "course": "Economics and Data Science", "grades": "AAB/B", "rp_70": 65 },
     { "university": "NTU", "course": "English", "grades": "BBC/C", "rp_70": 57.5 },
-    { "university": "NTU", "course": "History", "grades": "BCC/B", "rp_70": 56.25 },
+    { "university": "NTU", "course": "History", "grades": "BCC/B", "rp_70": 55 },
     { "university": "NTU", "course": "Linguistics & Multilingual Studies", "grades": "BBC/C", "rp_70": 57.5 },
     { "university": "NTU", "course": "Philosophy", "grades": "BBC/C", "rp_70": 57.5 },
-    { "university": "NTU", "course": "Philosophy, Politics, and Economics", "grades": "AAB/B", "rp_70": 66.25 },
-    { "university": "NTU", "course": "Psychology", "grades": "AAC/B", "rp_70": 63.75 },
-    { "university": "NTU", "course": "Public Policy & Global Affairs", "grades": "AAB/B", "rp_70": 66.25 },
+    { "university": "NTU", "course": "Philosophy, Politics, and Economics", "grades": "AAB/B", "rp_70": 65 },
+    { "university": "NTU", "course": "Psychology", "grades": "AAC/B", "rp_70": 62.5 },
+    { "university": "NTU", "course": "Public Policy & Global Affairs", "grades": "AAB/B", "rp_70": 65 },
     { "university": "NTU", "course": "Sociology", "grades": "BBC/C", "rp_70": 57.5 },
-    { "university": "NTU", "course": "Arts (Academic Discipline & Education)", "grades": "BCC/B", "rp_70": 56.25 },
+    { "university": "NTU", "course": "Arts (Academic Discipline & Education)", "grades": "BCC/B", "rp_70": 55 },
     { "university": "NTU", "course": "Science (Academic Discipline & Education)", "grades": "BBC/C", "rp_70": 57.5 },
-    { "university": "NTU", "course": "Sport Science & Management", "grades": "BCC/D", "rp_70": 53.75 },
+    { "university": "NTU", "course": "Sport Science & Management", "grades": "BCC/D", "rp_70": 55 },
     { "university": "SMU", "course": "Accountancy", "grades": "BBB/C", "rp_70": 60 },
     { "university": "SMU", "course": "Business Management", "grades": "ABB/C", "rp_70": 62.5 },
-    { "university": "SMU", "course": "Law", "grades": "AAA/A", "rp_70": 70 },
+    { "university": "SMU", "course": "Law", "grades": "AAA/A", "rp_70": 67.5 },
     { "university": "SMU", "course": "Economics", "grades": "BBB/C", "rp_70": 60 },
     { "university": "SMU", "course": "Information Systems", "grades": "BBC/C", "rp_70": 57.5 },
-    { "university": "SMU", "course": "Computer Science", "grades": "AAB/B", "rp_70": 66.25 },
+    { "university": "SMU", "course": "Computer Science", "grades": "AAB/B", "rp_70": 65 },
     { "university": "SMU", "course": "Computing & Law", "grades": "ABB/A", "rp_70": 65 },
-    { "university": "SMU", "course": "Software Engineering", "grades": "BBC/B", "rp_70": 58.75 },
+    { "university": "SMU", "course": "Software Engineering", "grades": "BBC/B", "rp_70": 57.5 },
     { "university": "SMU", "course": "Social Sciences", "grades": "BBB/C", "rp_70": 60 },
     { "university": "SMU", "course": "Deferred Declaration of Degree / Integrative Studies", "grades": "ABB/A", "rp_70": 65 }
-];
+]
 
 const h2Grades = { 'A': 20, 'B': 17.5, 'C': 15, 'D': 12.5, 'E': 10, 'S': 5, 'U': 0 };
 const h1Grades = { 'A': 10, 'B': 8.75, 'C': 7.5, 'D': 6.25, 'E': 5, 'S': 2.5, 'U': 0 };
@@ -157,13 +157,23 @@ document.getElementById('calculate-btn').addEventListener('click', () => {
     
     renderCourses(finalRP);
     
-    // Smooth scroll to results
-    resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Smooth scroll to calculate button
+    document.getElementById('calculate-btn').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+document.getElementById('nus-bonus-checkbox').addEventListener('change', () => {
+    const rpText = document.getElementById('rp-result').textContent;
+    const rp = parseFloat(rpText);
+    if (!isNaN(rp)) {
+        renderCourses(rp);
+    }
 });
 
 function renderCourses(rp) {
     const container = document.getElementById('courses-container');
     container.innerHTML = '';
+
+    const nusBonus = document.getElementById('nus-bonus-checkbox').checked;
 
     const universities = [
         { name: 'NUS', url: 'https://nus.edu.sg/oam/admissions/indicative-grade-profile' },
@@ -172,8 +182,13 @@ function renderCourses(rp) {
     ];
 
     universities.forEach(uni => {
+        let effectiveRp = rp;
+        if (uni.name === 'NUS' && nusBonus) {
+            effectiveRp += 2.5;
+        }
+
         const uniCourses = igpData
-            .filter(c => c.university === uni.name && rp >= c.rp_70)
+            .filter(c => c.university === uni.name && effectiveRp >= c.rp_70)
             .sort((a, b) => b.rp_70 - a.rp_70);
         
         if (uniCourses.length > 0) {
