@@ -182,13 +182,23 @@ function renderCourses(rp) {
     ];
 
     universities.forEach(uni => {
-        let effectiveRp = rp;
-        if (uni.name === 'NUS' && nusBonus) {
-            effectiveRp += 2.5;
-        }
+        const excludedNusCourses = [
+            "Medicine", "Dentistry", "Law", 
+            "Architecture", "Landscape Architecture", "Industrial Design", "Nursing",
+            "Philosophy, Politics & Economics"
+        ];
 
         const uniCourses = igpData
-            .filter(c => c.university === uni.name && effectiveRp >= c.rp_70)
+            .filter(c => {
+                if (c.university !== uni.name) return false;
+                
+                let effectiveRp = rp;
+                if (uni.name === 'NUS' && nusBonus && !excludedNusCourses.includes(c.course)) {
+                    effectiveRp += 2.5;
+                }
+                
+                return effectiveRp >= c.rp_70;
+            })
             .sort((a, b) => b.rp_70 - a.rp_70);
         
         if (uniCourses.length > 0) {
