@@ -217,15 +217,42 @@ function renderCourses(rp) {
             uniDiv.className = 'uni-section';
             
             const uniHeader = document.createElement('h3');
+            uniHeader.style.display = 'flex';
+            uniHeader.style.justifyContent = 'space-between';
+            uniHeader.style.alignItems = 'center';
+            uniHeader.style.cursor = 'pointer';
+            uniHeader.style.userSelect = 'none';
+            
             const uniLink = document.createElement('a');
             uniLink.href = uni.url;
             uniLink.target = '_blank';
             uniLink.rel = 'noopener noreferrer';
             uniLink.textContent = uni.name;
+            // Prevent link click from toggling the collapse
+            uniLink.addEventListener('click', (e) => e.stopPropagation());
+            
+            const toggleIcon = document.createElement('span');
+            toggleIcon.textContent = '▼';
+            toggleIcon.style.fontSize = '12px';
+            toggleIcon.style.transition = 'transform 0.3s ease';
+            toggleIcon.style.color = 'white';
+            
             uniHeader.appendChild(uniLink);
+            uniHeader.appendChild(toggleIcon);
             uniDiv.appendChild(uniHeader);
 
             const list = document.createElement('ul');
+            
+            // Toggle collapse on header click
+            uniHeader.addEventListener('click', () => {
+                if (list.style.display === 'none') {
+                    list.style.display = 'block';
+                    toggleIcon.style.transform = 'rotate(0deg)';
+                } else {
+                    list.style.display = 'none';
+                    toggleIcon.style.transform = 'rotate(-90deg)';
+                }
+            });
             uniCourses.forEach(c => {
                 const item = document.createElement('li');
                 
