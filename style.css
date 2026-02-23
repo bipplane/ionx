@@ -53,8 +53,14 @@ header p {
     text-decoration: underline;
 }
 
-.form-group {
+.h1-subjects-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     margin-bottom: 20px;
+}
+
+.form-group {
     display: flex;
     flex-direction: column;
 }
@@ -229,6 +235,10 @@ button:hover {
 }
 
 @media (max-width: 800px) {
+    .h1-subjects-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
     .subject-row {
         grid-template-columns: 1fr;
         gap: 10px;

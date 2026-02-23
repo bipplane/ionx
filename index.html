@@ -15,36 +15,38 @@
 
         <main>
             <section class="calculator-section">
-                <div class="form-group">
-                    <label for="gp">H1 General Paper</label>
-                    <select id="gp">
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
-                        <option value="D">D</option>
-                        <option value="E">E</option>
-                        <option value="S">S</option>
-                        <option value="U">U</option>
-                    </select>
-                </div>
+                <div class="h1-subjects-row">
+                    <div class="form-group">
+                        <label for="gp">H1 GP</label>
+                        <select id="gp">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                            <option value="S">S</option>
+                            <option value="U">U</option>
+                        </select>
+                    </div>
 
-                <div class="form-group">
-                    <label for="mtl">H1 Mother Tongue (Optional)</label>
-                    <select id="mtl">
-                        <option value="None">Not Taken / Excluded</option>
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
-                        <option value="D">D</option>
-                        <option value="E">E</option>
-                        <option value="S">S</option>
-                        <option value="U">U</option>
-                    </select>
+                    <div class="form-group">
+                        <label for="mtl">H1 MT (Optional)</label>
+                        <select id="mtl">
+                            <option value="None">Not Taken / Excluded</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                            <option value="S">S</option>
+                            <option value="U">U</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="subjects-grid">
                     <div class="subject-row">
-                        <label>Subject 1</label>
+                        <label>H2 Subject 1</label>
                         <select id="s1-level">
                             <option value="H2">H2</option>
                         </select>
@@ -59,7 +61,7 @@
                         </select>
                     </div>
                     <div class="subject-row">
-                        <label>Subject 2</label>
+                        <label>H2 Subject 2</label>
                         <select id="s2-level">
                             <option value="H2">H2</option>
                         </select>
@@ -74,7 +76,7 @@
                         </select>
                     </div>
                     <div class="subject-row">
-                        <label>Subject 3</label>
+                        <label>H2 Subject 3</label>
                         <select id="s3-level">
                             <option value="H2">H2</option>
                         </select>
@@ -120,9 +122,9 @@
                 <div class="eligible-courses">
                     <h2>Eligible Programmes (10th Percentile IGP)</h2>
                     <div class="disclaimer-note">
-                    <p><strong>Disclaimer:</strong> The IGP includes offers that were made under the Aptitude-based Admissions (ABA) framework. The grade profiles refer to the grades scored by 'A'-level applicants in their 3 H2 and 1 H1 subjects. For the purpose of this exercise, Grade "C" is assumed for both General Paper (GP) and Project Work (PW) in determining the grade profiles. Please note that certain programmes may require grades higher than "C" for GP.</p>
-                    <p style="margin-top: 8px;"><strong>First Choice Bonus Points:</strong> Some universities (like NUS and NTU) offer bonus points (e.g., up to 2.5 RP under the new 70 RP system) for your first-choice programme. This calculator does not automatically add these bonus points, so you <b>may</b> be eligible for courses slight above your RP if you place them as your first choice.</p>
-                    <p style="margin-top: 8px;"><strong>Increased Competitiveness:</strong> With the transition from the 90 RP to the 70 RP system, university admissions may become more competitive. The removal of the 4th H2/H1 content subject and Project Work from the base calculation means students are assessed on fewer subjects. Consequently, the margin for error is smaller, and a higher concentration of students may achieve the maximum 70 RP, potentially driving up the cut-off points for popular courses.</p>
+                    <p><strong>Disclaimer:</strong> The IGP includes offers that were made under the Aptitude-based Admissions (ABA) framework. The grade profiles refer to the grades scored by 'A'-level applicants in their 3 H2 and 1 H1 subjects. For the purpose of this exercise, Grade "C" is assumed for both GP and PW in determining the grade profiles. Certain programmes may require grades higher than "C" for GP.</p>
+                    <p style="margin-top: 8px;"><strong>First Choice Bonus Points (NUS ONLY):</strong> NUS offers bonus points (Additional 2.5 RP) for your first-choice programme, so you <b>may</b> be eligible for courses slightly above your RP if you place them as your first choice.</p>
+                    <p style="margin-top: 8px;"><strong>Increased Competitiveness:</strong> With the transition from the 90 RP to the 70 RP system, university admissions are likely to become more competitive. The removal of the 4th H2/H1 content subject and PW from the base calculation means students are assessed on fewer subjects. Consequently, the margin for error is smaller, and a higher concentration of students may achieve the maximum 70 RP, potentially driving up the cut-off points for courses.</p>
                 </div>
                     <div id="courses-container"></div>
                 </div>
