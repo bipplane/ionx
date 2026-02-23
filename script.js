@@ -124,28 +124,39 @@ document.getElementById('calculate-btn').addEventListener('click', () => {
     baseScore += h1Grades[gpGrade];
 
     let maxPercentage = baseScore / 70;
+    let breakdownText = `Base Score (3 H2 + GP): ${baseScore}`;
 
     const extraH1 = h1Scores.length > 0 ? h1Scores[0] : null;
     const mtlScore = mtlGrade !== 'None' ? h1Grades[mtlGrade] : null;
 
     if (extraH1 !== null) {
         const p = (baseScore + extraH1) / 80;
-        if (p > maxPercentage) maxPercentage = p;
+        if (p > maxPercentage) {
+            maxPercentage = p;
+            breakdownText = `Base Score + H1: (${baseScore} + ${extraH1}) / 80 = ${(p * 70).toFixed(2)}`;
+        }
     }
 
     if (mtlScore !== null) {
         const p = (baseScore + mtlScore) / 80;
-        if (p > maxPercentage) maxPercentage = p;
+        if (p > maxPercentage) {
+            maxPercentage = p;
+            breakdownText = `Base Score + MTL: (${baseScore} + ${mtlScore}) / 80 = ${(p * 70).toFixed(2)}`;
+        }
     }
 
     if (extraH1 !== null && mtlScore !== null) {
         const p = (baseScore + extraH1 + mtlScore) / 90;
-        if (p > maxPercentage) maxPercentage = p;
+        if (p > maxPercentage) {
+            maxPercentage = p;
+            breakdownText = `Base Score + H1 + MTL: (${baseScore} + ${extraH1} + ${mtlScore}) / 90 = ${(p * 70).toFixed(2)}`;
+        }
     }
 
     const finalRP = maxPercentage * 70;
     
     document.getElementById('rp-result').textContent = finalRP.toFixed(2);
+    document.getElementById('rp-breakdown').textContent = breakdownText;
     
     const resultsSection = document.getElementById('results-section');
     resultsSection.style.display = 'block';
