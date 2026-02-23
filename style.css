@@ -80,6 +80,15 @@ select {
     transition: border-color 0.3s;
 }
 
+select:disabled {
+    background-color: #eef2f2;
+    color: #7f8c8d;
+    border-color: #e0e0e0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 select:focus {
     border-color: #3498db;
     outline: none;
