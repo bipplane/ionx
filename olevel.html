@@ -203,23 +203,19 @@
                     </div>
                 </div>
 
-                <div class="bonus-points-section" style="margin-top: 20px; background: #f9fbfb; padding: 20px; border-radius: 8px;">
-                    <h3 style="font-size: 16px; margin-bottom: 10px; color: #2c3e50;">Bonus Points (Deductions)</h3>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                        <label style="cursor: pointer;">
-                            <select id="cca-bonus" style="padding: 5px; margin-right: 10px;">
+                <div class="bonus-points-section" style="margin-top: 20px; background: #f9fbfb; padding: 20px; border-radius: 8px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
+                    <h3 style="font-size: 16px; margin: 0; color: #2c3e50;">Bonus Points (Deductions)</h3>
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <label style="cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                            <select id="cca-bonus" style="padding: 5px;">
                                 <option value="0">None</option>
                                 <option value="1">Good (1 pt)</option>
                                 <option value="2">Excellent (2 pts)</option>
                             </select>
                             CCA Bonus
                         </label>
-                        <label style="cursor: pointer;">
-                            <input type="checkbox" id="hmt-bonus" value="2" style="margin-right: 10px;">
-                            Higher Mother Tongue (2 pts)
-                        </label>
-                        <label style="cursor: pointer;">
-                            <input type="checkbox" id="affiliation-bonus" value="2" style="margin-right: 10px;">
+                        <label style="cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                            <input type="checkbox" id="affiliation-bonus" value="2">
                             Affiliation (2 pts)
                         </label>
                     </div>

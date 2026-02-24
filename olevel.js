@@ -26,8 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 2. Gather Bonus Points
         const ccaBonus = parseInt(document.getElementById('cca-bonus').value);
-        const hmtBonus = document.getElementById('hmt-bonus').checked ? 2 : 0;
         const affiliationBonus = document.getElementById('affiliation-bonus').checked ? 2 : 0;
+        
+        // Check if HMT is eligible for 2pt reduction (must be A1 to D7, which is grade 1 to 7)
+        const hmtBonus = (hmt >= 1 && hmt <= 7) ? 2 : 0;
         
         // Max bonus points is usually capped at 4
         let totalBonus = Math.min(4, ccaBonus + hmtBonus + affiliationBonus);
