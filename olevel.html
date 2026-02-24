@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O-Level Calculator by IONX Labs</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAn1BMVEVHcEwA2boA0NEA2rsA08AA0sYAzssAyscAvd8Az7sxYXsAktwAuN8ArOUAivAAjvIAm+wAi/YAhPEAZN0AYt4AcuYAa+gAZN4AhvAzQl0AZeEATa8AWs4AefYAWMoAW9AATrsAS7JPT09QUFBRUVFNTU1NTU1OTk5YWFhQUFBRUVFNTU1RUVFPT09QUFBPT09SUlJVVVVQUFBPT09PT097bS41AAAANXRSTlMAizSvF3KdVXCHCiajiUN2S6SCZJw3pYiMBXsVUxmmg5c2UZqNQFk2FGp5SV/Ay7krHdruolYQfekAAAC7SURBVHgBxMm1AcBAEASxMTMz+/tv0g3cxlYq/uX5aEGIEkYxkpf4KbYsinOZcViUVUXdNAht1/d1D8NoZFNMMM3LaOUKsO2YOuA4J0zXXCzLDWqf4UB5QN+JdLwvmvtql5crAGEQiKKs6cAt+UsIYOy/No3HBlz4lnPPIHyJKISYMlAutQHta+P+ooxSVYcJ6tigCXgMrJGaPbj3Q12mi9qNGM/Zw2zHepvlzI7IpQJDYbbEZslThZ+6AEulEr32s4ujAAAAAElFTkSuQmCC">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SG O-Level Calculator</h1>
+            <p>Calculate your L1R5, L1R4, and ELR2B2 scores for JC, MI, and Poly admissions.</p>
+            <p class="powered-by">
+                Powered by <a href="https://ionxlabs.sg/" target="_blank" rel="noopener noreferrer">IONX Labs</a> | 
+                <a href="https://www.instagram.com/ionx.labs/" target="_blank" rel="noopener noreferrer">Instagram</a> | 
+                <a href="https://www.tiktok.com/@ionxlabs" target="_blank" rel="noopener noreferrer">TikTok</a>
+            </p>
+            <div class="nav-links" style="margin-top: 15px;">
+                <a href="index.html" style="margin-right: 15px; color: #7f8c8d; text-decoration: none; padding-bottom: 3px;">A-Level Calculator</a>
+                <a href="olevel.html" class="active-nav" style="font-weight: bold; color: #2c3e50; text-decoration: none; border-bottom: 2px solid #3498db; padding-bottom: 3px;">O-Level Calculator</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="calculator-section">
+                <div class="subjects-grid">
+                    <p style="font-size: 13px; color: #7f8c8d; margin-bottom: 15px; font-style: italic;">Select your grades for the subjects you took. The calculator will automatically find your best combinations.</p>
+
+                    <!-- L1: English / Higher Mother Tongue -->
+                    <div class="subject-row">
+                        <label>English Language (L1)</label>
+                        <select class="subject-type" disabled>
+                            <option value="L1">L1</option>
+                        </select>
+                        <select id="english-grade" class="grade-select">
+                            <option value="0">-</option>
+                            <option value="1">A1</option>
+                            <option value="2">A2</option>
+                            <option value="3">B3</option>
+                            <option value="4">B4</option>
+                            <option value="5">C5</option>
+                            <option value="6">C6</option>
+                            <option value="7">D7</option>
+                            <option value="8">E8</option>
+                            <option value="9">F9</option>
+                        </select>
+                    </div>
+
+                    <div class="subject-row">
+                        <label>Higher Mother Tongue (L1/R)</label>
+                        <select class="subject-type" disabled>
+                            <option value="L1/R">L1/R</option>
+                        </select>
+                        <select id="hmt-grade" class="grade-select">
+                            <option value="0">-</option>
+                            <option value="1">A1</option>
+                            <option value="2">A2</option>
+                            <option value="3">B3</option>
+                            <option value="4">B4</option>
+                            <option value="5">C5</option>
+                            <option value="6">C6</option>
+                            <option value="7">D7</option>
+                            <option value="8">E8</option>
+                            <option value="9">F9</option>
+                        </select>
+                    </div>
+
+                    <!-- Relevant Subjects -->
+                    <div class="subject-row">
+                        <label>Mother Tongue (R)</label>
+                        <select class="subject-type" disabled>
+                            <option value="R">R</option>
+                        </select>
+                        <select id="mt-grade" class="grade-select">
+                            <option value="0">-</option>
+                            <option value="1">A1</option>
+                            <option value="2">A2</option>
+                            <option value="3">B3</option>
+                            <option value="4">B4</option>
+                            <option value="5">C5</option>
+                            <option value="6">C6</option>
+                            <option value="7">D7</option>
+                            <option value="8">E8</option>
+                            <option value="9">F9</option>
+                        </select>
+                    </div>
+
+                    <div class="subject-row">
+                        <label>Mathematics (R)</label>
+                        <select class="subject-type" disabled>
+                            <option value="Math">Math</option>
+                        </select>
+                        <select id="math-grade" class="grade-select">
+                            <option value="0">-</option>
+                            <option value="1">A1</option>
+                            <option value="2">A2</option>
+                            <option value="3">B3</option>
+                            <option value="4">B4</option>
+                            <option value="5">C5</option>
+                            <option value="6">C6</option>
+                            <option value="7">D7</option>
+                            <option value="8">E8</option>
+                            <option value="9">F9</option>
+                        </select>
+                    </div>
+
+                    <div class="subject-row">
+                        <label>Science (R)</label>
+                        <select class="subject-type" disabled>
+                            <option value="Science">Science</option>
+                        </select>
+                        <select id="science-grade" class="grade-select">
+                            <option value="0">-</option>
+                            <option value="1">A1</option>
+                            <option value="2">A2</option>
+                            <option value="3">B3</option>
+                            <option value="4">B4</option>
+                            <option value="5">C5</option>
+                            <option value="6">C6</option>
+                            <option value="7">D7</option>
+                            <option value="8">E8</option>
+                            <option value="9">F9</option>
+                        </select>
+                    </div>
+
+                    <div class="subject-row">
+                        <label>Humanities (R)</label>
+                        <select class="subject-type" disabled>
+                            <option value="Humanities">Humanities</option>
+                        </select>
+                        <select id="humanities-grade" class="grade-select">
+                            <option value="0">-</option>
+                            <option value="1">A1</option>
+                            <option value="2">A2</option>
+                            <option value="3">B3</option>
+                            <option value="4">B4</option>
+                            <option value="5">C5</option>
+                            <option value="6">C6</option>
+                            <option value="7">D7</option>
+                            <option value="8">E8</option>
+                            <option value="9">F9</option>
+                        </select>
+                    </div>
+
+                    <!-- Other Subjects -->
+                    <div class="subject-row">
+                        <label>Other Subject 1</label>
+                        <select class="subject-type" disabled>
+                            <option value="Any">Any</option>
+                        </select>
+                        <select id="other1-grade" class="grade-select">
+                            <option value="0">-</option>
+                            <option value="1">A1</option>
+                            <option value="2">A2</option>
+                            <option value="3">B3</option>
+                            <option value="4">B4</option>
+                            <option value="5">C5</option>
+                            <option value="6">C6</option>
+                            <option value="7">D7</option>
+                            <option value="8">E8</option>
+                            <option value="9">F9</option>
+                        </select>
+                    </div>
+
+                    <div class="subject-row">
+                        <label>Other Subject 2</label>
+                        <select class="subject-type" disabled>
+                            <option value="Any">Any</option>
+                        </select>
+                        <select id="other2-grade" class="grade-select">
+                            <option value="0">-</option>
+                            <option value="1">A1</option>
+                            <option value="2">A2</option>
+                            <option value="3">B3</option>
+                            <option value="4">B4</option>
+                            <option value="5">C5</option>
+                            <option value="6">C6</option>
+                            <option value="7">D7</option>
+                            <option value="8">E8</option>
+                            <option value="9">F9</option>
+                        </select>
+                    </div>
+                    
+                    <div class="subject-row">
+                        <label>Other Subject 3</label>
+                        <select class="subject-type" disabled>
+                            <option value="Any">Any</option>
+                        </select>
+                        <select id="other3-grade" class="grade-select">
+                            <option value="0">-</option>
+                            <option value="1">A1</option>
+                            <option value="2">A2</option>
+                            <option value="3">B3</option>
+                            <option value="4">B4</option>
+                            <option value="5">C5</option>
+                            <option value="6">C6</option>
+                            <option value="7">D7</option>
+                            <option value="8">E8</option>
+                            <option value="9">F9</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="bonus-points-section" style="margin-top: 20px; background: #f9fbfb; padding: 20px; border-radius: 8px;">
+                    <h3 style="font-size: 16px; margin-bottom: 10px; color: #2c3e50;">Bonus Points (Deductions)</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <label style="cursor: pointer;">
+                            <select id="cca-bonus" style="padding: 5px; margin-right: 10px;">
+                                <option value="0">None</option>
+                                <option value="1">Good (1 pt)</option>
+                                <option value="2">Excellent (2 pts)</option>
+                            </select>
+                            CCA Bonus
+                        </label>
+                        <label style="cursor: pointer;">
+                            <input type="checkbox" id="hmt-bonus" value="2" style="margin-right: 10px;">
+                            Higher Mother Tongue (2 pts)
+                        </label>
+                        <label style="cursor: pointer;">
+                            <input type="checkbox" id="affiliation-bonus" value="2" style="margin-right: 10px;">
+                            Affiliation (2 pts)
+                        </label>
+                    </div>
+                </div>
+
+                <button id="calculate-btn" style="margin-top: 20px;">Calculate Scores</button>
+            </section>
+
+            <section class="results-section" id="results-section" style="display: none; margin-top: 30px;">
+                <div class="score-display" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; text-align: center;">
+                    <div style="background: #fff; padding: 20px; border-radius: 8px; border: 1px solid #d1e8f0;">
+                        <h3 style="color: #34495e; margin-bottom: 10px;">L1R5 (JC)</h3>
+                        <div style="font-size: 24px; font-weight: bold; color: #2c3e50;">
+                            <span id="l1r5-net">0</span>
+                        </div>
+                        <div style="font-size: 12px; color: #7f8c8d; margin-top: 5px;">
+                            Raw: <span id="l1r5-raw">0</span>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #fff; padding: 20px; border-radius: 8px; border: 1px solid #d1e8f0;">
+                        <h3 style="color: #34495e; margin-bottom: 10px;">L1R4 (MI)</h3>
+                        <div style="font-size: 24px; font-weight: bold; color: #2c3e50;">
+                            <span id="l1r4-net">0</span>
+                        </div>
+                        <div style="font-size: 12px; color: #7f8c8d; margin-top: 5px;">
+                            Raw: <span id="l1r4-raw">0</span>
+                        </div>
+                    </div>
+
+                    <div style="background: #fff; padding: 20px; border-radius: 8px; border: 1px solid #d1e8f0;">
+                        <h3 style="color: #34495e; margin-bottom: 10px;">ELR2B2 (Poly)</h3>
+                        <div style="font-size: 24px; font-weight: bold; color: #2c3e50;">
+                            <span id="elr2b2-net">0</span>
+                        </div>
+                        <div style="font-size: 12px; color: #7f8c8d; margin-top: 5px;">
+                            Raw: <span id="elr2b2-raw">0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="calculation-breakdown" style="margin-top: 20px; font-size: 13px; color: #7f8c8d; background: #fff; padding: 15px; border-radius: 4px; border: 1px solid #d1e8f0;">
+                    <!-- Breakdown will be injected here -->
+                </div>
+            </section>
+            
+            <footer style="text-align: center; margin-top: 40px; font-size: 14px; color: #7f8c8d;" target="_blank" rel="noopener noreferrer">
+                Developed by <a href="https://linkedin.com/in/ryanno3o">ryan</a> :>
+            </footer>
+        </main>
+    </div>
+    <script src="olevel.js"></script>
+</body>
+</html>
