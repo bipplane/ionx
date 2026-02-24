@@ -113,6 +113,11 @@ window.addEventListener('DOMContentLoaded', () => {
             if (data.nusBonus !== undefined) {
                 document.getElementById('nus-bonus-checkbox').checked = data.nusBonus;
             }
+
+            // Automatically calculate if we have saved data
+            if (data.gp !== 'None' && data.s1Grade !== 'None' && data.s2Grade !== 'None' && data.s3Grade !== 'None') {
+                document.getElementById('calculate-btn').click();
+            }
         } catch (e) {
             console.error('Error loading saved data:', e);
         }
