@@ -92,18 +92,58 @@ document.getElementById('s4-level').addEventListener('change', function() {
     }
 });
 
+// Load saved grades from localStorage on page load
+window.addEventListener('DOMContentLoaded', () => {
+    const savedData = localStorage.getItem('rpCalculatorData');
+    if (savedData) {
+        try {
+            const data = JSON.parse(savedData);
+            
+            if (data.gp) document.getElementById('gp').value = data.gp;
+            if (data.mtl) document.getElementById('mtl').value = data.mtl;
+            
+            for (let i = 1; i <= 4; i++) {
+                if (data[`s${i}Level`]) document.getElementById(`s${i}-level`).value = data[`s${i}Level`];
+                if (data[`s${i}Grade`]) document.getElementById(`s${i}-grade`).value = data[`s${i}Grade`];
+            }
+            
+            // Trigger change event for s4-level to update s4-grade disabled state
+            document.getElementById('s4-level').dispatchEvent(new Event('change'));
+            
+            if (data.nusBonus !== undefined) {
+                document.getElementById('nus-bonus-checkbox').checked = data.nusBonus;
+            }
+        } catch (e) {
+            console.error('Error loading saved data:', e);
+        }
+    }
+});
+
 document.getElementById('calculate-btn').addEventListener('click', () => {
     const gpGrade = document.getElementById('gp').value;
     const mtlGrade = document.getElementById('mtl').value;
 
     const subjects = [];
+    const saveData = {
+        gp: gpGrade,
+        mtl: mtlGrade,
+        nusBonus: document.getElementById('nus-bonus-checkbox').checked
+    };
+
     for (let i = 1; i <= 4; i++) {
         const level = document.getElementById(`s${i}-level`).value;
         const grade = document.getElementById(`s${i}-grade`).value;
+        
+        saveData[`s${i}Level`] = level;
+        saveData[`s${i}Grade`] = grade;
+        
         if (level !== 'None' && grade !== 'None') {
             subjects.push({ level, grade });
         }
     }
+    
+    // Save to localStorage
+    localStorage.setItem('rpCalculatorData', JSON.stringify(saveData));
 
     const h2Scores = subjects.filter(s => s.level === 'H2').map(s => h2Grades[s.grade]);
     const h1Scores = subjects.filter(s => s.level === 'H1').map(s => h1Grades[s.grade]);
