@@ -11,13 +11,18 @@
     <div class="container">
         <header>
             <h1>SG A-Level Calculator (70 RP)</h1>
-            <p>Calculate your Rank Points and discover eligible university programmes based on AY25/26 IGP.</p>            <p class="powered-by">Powered by <a href="https://ionxlabs.sg/" target="_blank" rel="noopener noreferrer">IONX Labs</a></p>        </header>
+            <p>Calculate your Rank Points and discover eligible university programmes based on the latest IGP.</p>            <p class="powered-by">Powered by <a href="https://ionxlabs.sg/" target="_blank" rel="noopener noreferrer">IONX Labs</a></p>        </header>
 
         <main>
             <section class="calculator-section">
-                <div class="h1-subjects-row">
-                    <div class="form-group">
+                <div class="subjects-grid">
+                    <p style="font-size: 13px; color: #7f8c8d; margin-bottom: 15px; font-style: italic;">For accurate calculation, please indicate grades for all subjects, including optional ones.</p>
+
+                    <div class="subject-row">
                         <label for="gp">H1 GP</label>
+                        <select id="gp-level" disabled>
+                            <option value="H1">H1</option>
+                        </select>
                         <select id="gp">
                             <option value="A">A</option>
                             <option value="B">B</option>
@@ -29,10 +34,13 @@
                         </select>
                     </div>
 
-                    <div class="form-group">
-                        <label for="mtl">H1 MT (Optional)</label>
+                    <div class="subject-row">
+                        <label for="mtl">H1 MTL (Optional)</label>
+                        <select id="mtl-level" disabled>
+                            <option value="H1">H1</option>
+                        </select>
                         <select id="mtl">
-                            <option value="None">Not Taken / Excluded</option>
+                            <option value="None">-</option>
                             <option value="A">A</option>
                             <option value="B">B</option>
                             <option value="C">C</option>
@@ -42,9 +50,6 @@
                             <option value="U">U</option>
                         </select>
                     </div>
-                </div>
-
-                <div class="subjects-grid">
                     <div class="subject-row">
                         <label>1st H2</label>
                         <select id="s1-level" disabled>
@@ -121,10 +126,10 @@
                 </div>
 
                 <div class="eligible-courses">
-                    <h2>Eligible Programmes (10th Percentile IGP)</h2>
+                    <h2>Eligible Programmes</h2>
                     <div class="disclaimer-note">
-                    <p><strong>Disclaimer:</strong> The IGP includes offers that were made under the Aptitude-based Admissions (ABA) framework. The grade profiles refer to the grades scored by 'A'-level applicants in their 3 H2 and 1 H1 subjects. For the purpose of this exercise, Grade "C" is assumed for both GP and PW in determining the grade profiles. Certain programmes may require grades higher than "C" for GP.</p>
-                    <p style="margin-top: 8px;"><strong><a href="https://www.nus.edu.sg/oam/admissions/first-choice-bonus-points" target="_blank" rel="noopener noreferrer" style="color: #e67e22; text-decoration: underline;">First Choice Bonus Points (NUS ONLY)</a>:</strong> NUS offers bonus points (additional 2.5 RP) for your first-choice programme, so you <b>may</b> be eligible for courses slightly above your RP if you place them as your <b>first choice</b>. Note that this bonus does not apply to Medicine, Dentistry, Law, Architecture, Landscape Architecture, Industrial Design, Nursing, and Philosophy, Politics & Economics.</p>
+                    <p><strong>Disclaimer:</strong> The IGP includes offers made under the Aptitude-based Admissions (ABA) framework. Grade "C" is assumed for GP and PW in determining the grade profiles. Certain programmes may require grades higher than "C" for GP.</p>
+                    <p style="margin-top: 8px;"><strong><a href="https://www.nus.edu.sg/oam/admissions/first-choice-bonus-points" target="_blank" rel="noopener noreferrer" style="color: #e67e22; text-decoration: underline;">First Choice Bonus Points (NUS ONLY)</a>:</strong> NUS offers bonus points (+2.5 RP) for your first-choice programme, so you may be eligible for courses slightly above your RP if you place it as your first choice. <b>This bonus does not apply to Medicine, Dentistry, Law, Architecture, Landscape Architecture, Industrial Design, Nursing, and Philosophy, Politics & Economics.</b></p>
                     <p style="margin-top: 8px;"><strong>Increased Competitiveness:</strong> With the transition from the 90 RP to the 70 RP system, university admissions are likely to become more competitive. The removal of the 4th H2/H1 content subject and PW from the base calculation means students are assessed on fewer subjects. Consequently, the margin for error is smaller, and a higher concentration of students may achieve the maximum 70 RP, potentially driving up the cut-off points for courses.</p>
                 </div>
                 
