@@ -236,6 +236,29 @@ button:hover {
     to { opacity: 1; transform: translateY(0); }
 }
 
+.site-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.site-footer p {
+    margin-bottom: 5px;
+}
+
+.site-footer a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 800px) {
     .h1-subjects-row {
         grid-template-columns: 1fr;
