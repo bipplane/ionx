@@ -167,10 +167,9 @@ button:hover {
 
 .uni-section {
     margin-bottom: 15px;
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    background: #ffffff
     border-radius: 8px;
     padding: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .uni-section h3 {
