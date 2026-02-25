@@ -4,7 +4,7 @@ const igpData = [
     { "university": "NUS", "course": "Nursing", "grades": "CCD/C", "rp_70": 50 },
     { "university": "NUS", "course": "Dentistry", "grades": "AAA/A", "rp_70": 67.5 },
     { "university": "NUS", "course": "Architecture", "grades": "CCC/C", "rp_70": 52.5 },
-    { "university": "NUS", "course": "Engineering", "grades": "BBB/C", "rp_70": 60 },
+    { "university": "NUS", "course": "Engineering*", "grades": "BBB/C", "rp_70": 60 },
     { "university": "NUS", "course": "Industrial Design", "grades": "BBC/B", "rp_70": 58.75 },
     { "university": "NUS", "course": "Landscape Architecture", "grades": "CCC/B", "rp_70": 53.75 },
     { "university": "NUS", "course": "Business Analytics (Computing)", "grades": "AAA/A", "rp_70": 67.5 },
@@ -15,7 +15,7 @@ const igpData = [
     { "university": "NUS", "course": "Data Science & Economics", "grades": "AAA/A", "rp_70": 67.5 },
     { "university": "NUS", "course": "Environmental Studies", "grades": "AAA/B", "rp_70": 67.5 },
     { "university": "NUS", "course": "Food Science & Technology", "grades": "AAA/C", "rp_70": 67.5 },
-    { "university": "NUS", "course": "Humanities & Sciences", "grades": "ABB/C", "rp_70": 62.5 },
+    { "university": "NUS", "course": "Humanities & Sciences*", "grades": "ABB/C", "rp_70": 62.5 },
     { "university": "NUS", "course": "Pharmaceutical Science", "grades": "AAA/A", "rp_70": 67.5 },
     { "university": "NUS", "course": "Pharmacy", "grades": "AAA/C", "rp_70": 67.5 },
     { "university": "NUS", "course": "Philosophy, Politics & Economics", "grades": "AAA/A", "rp_70": 67.5 },
@@ -315,6 +315,19 @@ function renderCourses(rp) {
             });
             
             uniDiv.appendChild(list);
+
+            if (uni.name === 'NUS' && uniCourses.some(c => c.course.includes('*'))) {
+                const note = document.createElement('p');
+                note.style.fontSize = '12px';
+                note.style.color = '#7f8c8d';
+                note.style.marginTop = '10px';
+                note.style.fontStyle = 'italic';
+                
+                note.innerHTML = '* <a href="https://cde.nus.edu.sg/undergraduate/#data-node.html" target="_blank" rel="noopener noreferrer" style="color: #7f8c8d; text-decoration: underline;">Engineering</a> and <a href="https://chs.nus.edu.sg/programmes/" target="_blank" rel="noopener noreferrer" style="color: #7f8c8d; text-decoration: underline;">Humanities & Sciences</a> are "bundles" that have multiple degree programmes to choose from.';
+                
+                uniDiv.appendChild(note);
+            }
+
             container.appendChild(uniDiv);
         }
     });
