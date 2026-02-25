@@ -167,14 +167,19 @@ button:hover {
 
 .uni-section {
     margin-bottom: 15px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .uni-section h3 {
-    background: #34495e;
-    padding: 6px 12px;
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    padding: 8px 12px;
     border-radius: 6px;
     margin-bottom: 10px;
     font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .uni-section h3 a {
@@ -191,14 +196,20 @@ button:hover {
 }
 
 .uni-section li {
-    background: #fff;
-    border: 1px solid #eee;
-    padding: 8px 12px;
-    margin-bottom: 4px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 1px solid #e9ecef;
+    padding: 6px 10px;
+    margin-bottom: 6px;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.uni-section li:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
 }
 
 .course-name {
@@ -207,12 +218,13 @@ button:hover {
 }
 
 .course-igp {
-    color: #7f8c8d;
+    color: #6c757d;
     font-size: 12px;
     background: #f4f7f6;
     padding: 2px 6px;
     border-radius: 4px;
     margin-top: 3px;
+    border: 1px solid #dee2e6;
 }
 
 .disclaimer-note {
