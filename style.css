@@ -74,6 +74,9 @@ select {
 }
 
 select:disabled {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
     background-color: #eef2f2;
     color: #7f8c8d;
     border-color: #e0e0e0;
