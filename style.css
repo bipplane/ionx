@@ -170,7 +170,7 @@ button:hover {
 
 .uni-section {
     margin-bottom: 15px;
-    background: #ffffff
+    background: #ffffff;
     border-radius: 8px;
     padding: 10px;
 }
@@ -243,6 +243,54 @@ button:hover {
 
 .disclaimer-note strong {
     color: #e67e22;
+}
+
+.tooltip-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    background-color: #7f8c8d;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: help;
+    position: relative;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+.tooltip-icon:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2c3e50;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: normal;
+    white-space: normal;
+    width: 250px;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    line-height: 1.4;
+}
+
+.tooltip-icon:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #2c3e50;
+    z-index: 10;
 }
 
 @keyframes fadeIn {
